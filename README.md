@@ -1,2 +1,3 @@
 # ohio-chess
-"AHHHHHHHHHHHHH AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH" ~pink guy
+
+wenomechainsama tumarjarbisaun wifenloof eserlifterbraun
