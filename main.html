@@ -1,0 +1,56 @@
+<style>
+	body{
+		background: black;
+	}
+</style>
+
+<title>chess for broke ass niggas</title>
+
+<script src="gameLogic.js"></script>
+<script src="mateLogic.js"></script>
+<script src="gameClass.js"></script>
+<script src="chessPieces.js"></script>
+
+<script>
+
+	//game canvas
+	var canvas = document.createElement("canvas")
+	canvas.width = 640
+	canvas.height = 640
+	canvas.style = "position: absolute; margin: auto; background: black; border: 2px solid white"
+	canvas.style.left = innerWidth/2-canvas.width/2
+	canvas.style.top = innerHeight/2-canvas.height/2
+	var context = canvas.getContext('2d')
+
+
+	//instantiate new game
+	var game = new Game({
+		width: 8,
+		height: 8,
+		scale: 80
+	})
+
+	window.onload = ()=>{
+
+		document.body.appendChild(canvas)
+
+		game.define_grid()
+		game.define_pieces()
+		game.set_pieces()
+
+		main()
+	}
+
+
+	function main(){
+		window.requestAnimationFrame(main)
+
+		game.render_board()
+
+		if (game.current_tile!=null)game.current_tile.style.opacity = 0.7
+		if (game.move_tile!=null)game.move_tile.style.opacity = 0.7
+
+	}
+
+
+</script>
